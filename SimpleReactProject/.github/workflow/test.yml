@@ -1,0 +1,18 @@
+# https://github.com/academind/github-actions-course-resources/tree/main/Code/ZZ%20Git%20%26%20GitHub%20Refresher
+
+name: Test Project
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3 # uses -  to use actions
+      - name: Install NodeJs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci # npm install would also work , but to be on safe side no breaking dependencies ci is safe
+      - name: Run tests
+        run: npm test
