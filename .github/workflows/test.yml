@@ -16,3 +16,5 @@ jobs:
         run: npm ci # npm install would also work , but to be on safe side no breaking dependencies ci is safe
       - name: Run tests
         run: npm test
+      - name: Testing workflow
+        run: echo "Tetsing running ..."
