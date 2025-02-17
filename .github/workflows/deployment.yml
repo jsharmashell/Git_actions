@@ -1,7 +1,7 @@
 # https://github.com/academind/github-actions-course-resources/tree/main/Code/ZZ%20Git%20%26%20GitHub%20Refresher
 
 name: Test Project
-on: push
+on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
