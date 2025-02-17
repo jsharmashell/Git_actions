@@ -17,8 +17,9 @@ jobs:
       - name: Run tests
         run: npm test
       - name: Testing workflow
-        run: echo "Tetsing running ..."
+        run: echo "Testing running ..."
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
